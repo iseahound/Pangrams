@@ -3,7 +3,7 @@
 ; Press 1 to generate pangrams?
 1:: SendText GenerateLine("Pangrams.txt", PangramVerify)
 
-GenerateLine(filepath, verify := "") {
+GenerateLine(filepath, verify := (s) => "") {
    static cache := Map()
 
    if cache.has(filepath)
